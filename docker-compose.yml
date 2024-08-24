@@ -1,0 +1,13 @@
+services:
+  ah-bot-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ah-bot-container
+    image: ah-bot-image
+    restart: always
+    volumes:
+      - .\data:/app/data
+      - .\logs:/app/logs
+    env_file:
+      - .env
