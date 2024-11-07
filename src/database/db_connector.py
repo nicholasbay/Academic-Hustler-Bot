@@ -6,7 +6,7 @@ import sqlite3
 
 def connect_to_database() -> sqlite3.Connection:
     """
-    Connects to the database.
+    Connects to the database. Creates the database if it doesn't exist.
 
     Returns:
         sqlite3.Connection: The connection object.
